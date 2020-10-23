@@ -1,5 +1,5 @@
 import { AxiosRequestConfig, AxiosPromise, AxiosResponse } from './types'
-import { bulidURL } from './helpers/url'
+import { buildURL } from './helpers/url'
 import { transformRequest, transformResponse } from './helpers/data'
 import { processHeaders } from './helpers/headers'
 import xhr from './xhr'
@@ -20,7 +20,7 @@ function axios (config: AxiosRequestConfig): AxiosPromise {
   
   function transformUrl (config: AxiosRequestConfig): string {
     const { url, params } = config
-    return bulidURL(url, params)
+    return buildURL(url, params)
   }
 
   function transformRequestData (config: AxiosRequestConfig): any {
